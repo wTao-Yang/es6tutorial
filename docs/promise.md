@@ -91,7 +91,7 @@ console.log('Hi!');
 
 上面代码中，Promise 新建后立即执行，所以首先输出的是`Promise`。然后，`then`方法指定的回调函数，将在当前脚本所有同步任务执行完才会执行，所以`resolved`最后输出。
 
-下面是异步加载图片的例子。
+下面是加载图片成功后进行异步操作的例子。
 
 ```javascript
 function loadImageAsync(url) {
@@ -111,7 +111,7 @@ function loadImageAsync(url) {
 }
 ```
 
-上面代码中，使用`Promise`包装了一个图片加载的异步操作。如果加载成功，就调用`resolve`方法，否则就调用`reject`方法。
+上面代码中，使用`Promise`包装了一个图片加载成功后的异步操作。如果加载成功，就调用`resolve`方法，否则就调用`reject`方法。
 
 下面是一个用`Promise`对象实现的 Ajax 操作的例子。
 
